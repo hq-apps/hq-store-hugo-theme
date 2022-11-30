@@ -24,9 +24,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/style-store.css">
     <link rel="stylesheet" href="/slideshow.css">
+    <script src="/modal.js" defer></script>
 </head>
 <body>
     <main class="m-3">
+      <div class="hq-modal-back">
+      </div>
+      <div class="hq-modal">
+        <div class="hq-modal-content">
+          <h1>modal</h1>
+          <p>This is an example modal</p>
+        </div>
+        <div class="hq-modal-buttons">
+          <button onclick="toggleModal()">Ok</button>
+          <button onclick="toggleModal()">Cancel</button>
+        </div>
+      </div>
+      <button onclick="toggleModal()">Modal</button>
     {{ block "main" . }}
 
     {{ end }}
