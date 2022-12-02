@@ -1,0 +1,9 @@
+{
+    {{ $list := (.Pages) }}
+    {{ $len := (len $list) }}
+    "by-name": {
+    {{ range $index, $element := $list }}
+        "{{ .Title }}": "{{ .RelPermalink }}"{{ if not (eq (add $index 1) $len) }},{{end}}
+    {{ end }}
+    }
+}

@@ -1,0 +1,19 @@
+{
+    {{ $list := (.Pages) }}
+    {{ $len := (len $list) }}
+    "by-hqid": {
+        {{ range $index, $element := $list }}
+            "{{ .Params.hqid }}": "{{ .RelPermalink }}"{{ if not (eq (add $index 1) $len) }},{{end}}
+        {{ end }}
+    },
+    "by-name": {
+    {{ range $index, $element := $list }}
+        "{{ .Title }}": "{{ .RelPermalink }}"{{ if not (eq (add $index 1) $len) }},{{end}}
+    {{ end }}
+    },
+    "by-android-id": {
+        {{ range $index, $element := $list }}
+            "{{ .Params.androidid }}": "{{ .RelPermalink }}"{{ if not (eq (add $index 1) $len) }},{{end}}
+        {{ end }}
+    }
+}

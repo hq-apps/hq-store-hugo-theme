@@ -1,0 +1,8 @@
+{
+        "title": "{{ .Title }}",
+        "description": "{{ .Description }}",
+        "hqid": "{{ .Params.hqappid }}",
+        "androidid": "{{ .Params.androidid }}",
+        "icon": "{{ .Params.icon }}",
+        "downloadURL": "{{ .Params.dlLink }}"
+}
